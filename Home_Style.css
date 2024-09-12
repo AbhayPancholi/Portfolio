@@ -25,33 +25,110 @@ header {
     background-color: #FFFFFF;
     color: #100707;
     padding: 10px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-header .container {
+.header_container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    width: 90%;
+    margin: 0 auto;
 }
 
-header h1.logo {
+h1.logo {
     font-size: 1.8rem;
+    font-weight: bold;
+    color: #100707;
 }
 
-header nav ul {
+.nav-links {
     list-style: none;
     display: flex;
+    align-items: center;
 }
 
-header nav ul li {
-    margin: 0 10px;
+.nav-links li {
+    margin-left: 20px;
 }
 
-header nav ul li a {
-    color: #494747;
+.nav-links li a {
     text-decoration: none;
+    color: #100707;
     font-size: 1rem;
+    transition: color 0.3s ease;
 }
+
+.nav-links li a:hover {
+    color: #e74c3c;
+}
+
+/* Hamburger Menu (Hidden by Default) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #100707;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;  /* Hide the regular menu */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #fff;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .nav-links.active {
+        display: flex;  /* Show the menu when hamburger is clicked */
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    /* Show hamburger icon */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Center logo */
+    h1.logo {
+        font-size: 1.5rem;
+        text-align: center;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Hamburger Animation */
+.hamburger.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
 
 /* Hero Section */
 .hero {
@@ -63,13 +140,13 @@ header nav ul li a {
     align-items: center;
     justify-content: flex-start; /* Align to the left */
     text-align: left;            /* Left-align text */
-    padding-left: 10%;           /* Space to the left for alignment */
+    padding-left: 7%;           /* Space to the left for alignment */
     padding-right: 10%;
     box-sizing: border-box;      /* Ensure padding is included in width */
 }
 
 .hero h1 {
-    font-size: 3.5rem;            /* Larger heading for desktop */
+    font-size: 4rem;            /* Larger heading for desktop */
     line-height: 1.2;           /* Control spacing between lines */
     margin-bottom: 20px;
 }
@@ -113,41 +190,6 @@ header nav ul li a {
     }
 }
 
-
-/* Hero Section */
-.hero {
-    background: url('D:/MyProject/Projects on github/Portfolio Website/assets/background_image.jfif') no-repeat center center/cover;
-    background-color: #2c3e50;
-    color: #fff;
-    height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; /* Align content to the left */
-    text-align: left;            /* Left-align the text */
-    padding-left: 3%;           /* Add padding from the left to match logo alignment */
-}
-
-.hero h1 {
-    /* word-wrap: break-word; */
-    font-size: 5.5rem;
-    font-weight: 5000;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
-/* .hero .btn {
-    background-color: #e74c3c;
-    color: #fff;
-    padding: 10px 20px;
-    font-size: 1.1rem;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-} */
 
 
 /* Section Styles */
