@@ -37,6 +37,7 @@ header {
 }
 
 h1.logo {
+    text-align: left;
     font-size: 1.8rem;
     font-weight: bold;
     color: #100707;
@@ -273,10 +274,91 @@ h1.logo {
 }
 
 
+/* Card Section */
+.cards-section {
+    padding: 60px 0;
+    background-color: #f8f8f8;
+    text-align: left;
+}
+
+.cards-section h2 {
+
+    color: #28a745;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+.cards-section h3 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.cards {
+    display: flex;
+    justify-content: center; /* Align cards centrally */
+    gap: 40px; /* Adjust gap between cards for uniform spacing */
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    flex-grow: 1; /* Ensures all cards take up equal space */
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px; /* Make the border radius smaller for a clean look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 280px; /* Reduced width for smaller cards */
+    min-height: 320px; /* Reduced height for smaller cards */
+    text-align: left;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Even distribution of content */
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Lift the card on hover */
+}
+
+.card img {
+    width: 100%;
+    height: 180px; /* Adjusted image height */
+    object-fit: cover; /* Ensure image fits within the card */
+}
+
+.card-content {
+    padding: 15px; /* Adjust padding for uniformity */
+}
+
+.card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.card p {
+    color: #777;
+    font-size: 0.9rem; /* Reduce font size to match the smaller card */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
 
 
 /* Section Styles */
-section {
+/* section {
     padding: 60px 20px;
 }
 
@@ -299,7 +381,7 @@ section h3 {
     margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+} */
 
 /* Footer */
 footer {
