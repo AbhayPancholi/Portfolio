@@ -9,3 +9,11 @@ This portfolio website showcases my skills, projects, and achievements. It is de
 - Skills Section: Highlights programming languages, tools, and frameworks.
 - Projects Section: Displays detailed information about various projects done by me.
 - Certificates and Achievements Section: Showcases my achievements and certifications.
+
+## Technologies Used
+- HTML: Structure of the website.
+- CSS: Styling and layout.
+- JavaScript: Interactive elements.
+- Bootstrap: For responsive design.
+- Git: Version control.
+- GitHub Pages: Hosting.
