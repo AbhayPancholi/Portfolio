@@ -14,6 +14,5 @@ This portfolio website showcases my skills, projects, and achievements. It is de
 - HTML: Structure of the website.
 - CSS: Styling and layout.
 - JavaScript: Interactive elements.
-- Bootstrap: For responsive design.
 - Git: Version control.
 - GitHub Pages: Hosting.
