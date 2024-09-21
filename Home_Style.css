@@ -293,15 +293,18 @@ h1.logo {
 /* About Image */
 .about-image {
     flex: 1;
-    max-width: 600px;
+    max-width: 400px; /* Reduced width to make it appear narrow */
+    margin: 0 auto; /* Center the image */
 }
 
 .about-image img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+    width: 100%; /* Ensure the image fills the available width */
+    height: 500px; /* Fixed height to make it longer */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
     border-radius: 10px;
+    display: block;
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
